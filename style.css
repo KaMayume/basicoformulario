@@ -1,0 +1,159 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+
+label {
+  /*funciona como um elemento inline e o input como elemento de bloco*/
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+input {
+  /*ñ herda font-size. Se tiver com uma valor abaixo de 1rem irá quebrar o layout, pois irá dar um zoom na tela*/
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+.checkbox,
+.radio {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  margin-top: 30px;
+  display: block;
+  font-size: 2rem;
+  padding: 10px 20px;
+  background: #caf;
+  border: none;
+  color: blue;
+  border-radius: 4px;
+  cursor: pointer; /*coloca a mãozinha quando passar/clicar no botão*/
+}
+
+.checkbox label,
+.radio label {
+  margin: 0px;
+}
+
+.checkbox input,
+.radio input {
+  margin: 0px;
+  width: 20px;
+  height: 20px;
+}
+
+select {
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+textarea {
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*[atributo] Seleciona os elementos que tiverem o atributo dentro dos [], ao invés de criar class*/
+[required] {
+  border: 2px solid tomato;
+}
+
+a[href="#contato"] {
+  border: 2px solid greenyellow;
+}
+
+/*[href^="#"] Atributos que comecem ^ com o valor.*/
+[href^="#"] {
+  background: lightcoral;
+}
+
+/*[href$=".com"] Atributos que terminem $ com o valor.*/
+[href$=".com"] {
+  background: forestgreen;
+}
+
+/*[name="email"] Seleciona apenas o elemento que tiver o atributo e o valor.*/
+[name="email"] {
+  border: 2px solid blue;
+}
+
+/*div > p :Apenas p que for filho direto de div*/
+section > h2 {
+  color: tomato;
+}
+
+p {
+  margin: 0px;
+  font-size: 1.5rem;
+}
+
+article {
+  background: lightgreen;
+  padding: 10px;
+}
+
+/*p + p :Todo p que vier após um elemento p */
+p + p {
+  margin-top: 20px;
+}
+
+/*
+* :Seleciona todos os elementos do site.
+*/
+
+/*Especificidade: A ordem do elemento só importa se eles possuírem a mesma especificidade. Caso contrário o seletor mais específico irá prevalecer.
+id (1, 0, 0) Primeiro nível.
+classes, atributos e pseudo classes (0, 1, 0) Segundo nível. 
+elementos e pseudo elementos (0, 0, 1) Terceiro nível. 
+!important : Com o valor !important na frente do valor da propriedade, esta passa a ser mais relevante do que qualquer seletor existente. A não ser que exista duas propriedades iguais em seletores diferentes com o !important.*/
+
+/*Propriedades customizadas: variáveis css (custom properties), permite definirmos valores no CSS que podem ser reutilizados no nosso código.
+
+A propriedade é herdada pelos elementos filhos. É comum definirmos as mesmas nos elementos :root ou html, assim teremos acesso à propriedade em todos os elementos do site.
+--roxo: #caf : Define uma propriedade customizada.
+var(--roxo): A função var utiliza uma propriedade customizada.*/
+/*No CSS: :root {
+  --tamanho-titulo: 3rem;
+  --cor-primaria: #84e;
+  
+h1 {
+  font-size: var(--tamanho-titulo);
+  color: var(--cor-primaria);
+}*/
+
+/*A @media prefers-color-scheme irá executar o código css conforme a preferência de tema do usuário. Funciona da mesma forma que o @media querie com o max-width, porém agora em relação ao modo escuro (dark) ou claro (light)*/
+
+/*@media (prefers-color-scheme: dark) {
+  :root {
+    --fundo: #222;
+    --texto-1: #eee;
+    --texto-2: #bbb;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --fundo: #fff;
+    --texto-1: #111;
+    --texto-2: #444;
+  }
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  background: var(--fundo);
+}
+
+h1 {
+  color: var(--texto-1);
+}
+
+p {
+  color: var(--texto-2);
+}*/

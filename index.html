@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Formulário</title>
+</head>
+
+<body>
+  <!--A tag form é utilizada para envolver os campos de um formulário.-->
+  <!--O atributo action indica o arquivo/url que será ativado ao enviarmos o formulário.-->
+  <!--POST (envio de informações) e GET (busca de informações).-->
+  <!--Label: define o rótulo do formulário. for="" relaciona a label e o id="" do formulário.-->
+  <!--for e id precisam ter os mesmos valores. Name não precisa ser igual, mas geralmente colocamos o mesmo-->
+  <!--Type: define o tipo. text, checkbox, radio, email, file etc.-->
+  <!--required: não deixa enviar o formulário se o campo que colocamos esse atributo não estiver preenchido. Define o input como obrigatório.-->
+  <!--Placeholder: Texto quando o formulário não está preenchido. (dica de preenchimento)-->
+  <!--Disabled: Desabilita o input.-->
+  <!--minlength e maxlength: Mínimo e máximo de caracteres.-->
+  <!--Radio: Grupo de inputs com base no mesmo name, apenas um pode ser selecionado.-->
+  <!--Select: Campo de seleção com diferentes opções (option-opções do campo de seleção).-->
+  <!-- textarea:Área de texto, para valores que ocupem mais de uma linha.-->
+  <!-- Rows:Indica o tamanho de linhas visíveis.-->
+
+
+  <form action="./">
+
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" name="nome">
+
+    <label for="senha">Senha</label>
+    <input type="password" id="senha" name="senha">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="idade">Idade</label>
+    <input type="number" id="idade" name="idade">
+
+    <label for="saida">Saída de Hotel</label>
+    <input type="date" id="saida" name="saida">
+
+    <label for="cpf">CPF</label>
+    <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00"> -->
+
+    <div class="checkbox">
+      <input type="checkbox" id="termos" name="termos" value="aceito">
+      <label for="termos">Aceito os termos e condições</label>
+    </div>
+    <div class="checkbox">
+      <input type="checkbox" id="anuncio" name="anuncio">
+      <label for="anuncio">Desejo receber anúncios</label>
+    </div>
+
+    <p>Entrega:</p>
+    <div class="radio">
+      <input type="radio" id="retirada" name="retirada">
+      <label for="retirada">Retirar no local</label>
+    </div>
+    <div class="radio">
+      <input type="radio" id="entrega" name="retirada">
+      <label for="entrega">Entrega em casa</label>
+    </div> -->
+
+    <label for="parcelas"></label>
+    <select name="parcelas" id="parcelas">
+      <option value="1x">1x de 200</option>
+      <option value="2x">2x de 100</option>
+      <option value="4x">4x de 50</option>
+    </select>
+
+    <label for="mensagem">Mensagem</label>
+    <textarea id="mensagem" name="mensagem" rows="5"></textarea>
+
+    <button>Enviar</button> -->
+
+    <input type="text">
+    <input type="text" required>
+    <p required>Esse é um teste</p>
+
+    <a href="#contato">Contato</a>
+    <a href="https://www.origamid.com">Origamid</a>
+
+    <input type="text" name="email">
+  </form>
+
+  <section>
+    <h2>Nossa Empresa</h2>
+    <div>
+      <h2>Saiba Mais</h2>
+    </div>
+  </section>
+
+  <article>
+    <p>Esse é um teste de parágrafo</p>
+    <p>Mais um teste aqui</p>
+    <p>E um último teste de p</p>
+  </article>
+
+</body>
+
+</html>
